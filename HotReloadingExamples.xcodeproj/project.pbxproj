@@ -25,6 +25,7 @@
 		020C721428168FF500A0DE3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020C721728168FF500A0DE3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020C721928168FF500A0DE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		020C7222281690CB00A0DE3A /* HotReloadingExamples.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotReloadingExamples.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		020C720828168FF500A0DE3A /* HotReloadingExamples */ = {
 			isa = PBXGroup;
 			children = (
+				020C7222281690CB00A0DE3A /* HotReloadingExamples.entitlements */,
 				020C721428168FF500A0DE3A /* Assets.xcassets */,
 				020C721628168FF500A0DE3A /* LaunchScreen.storyboard */,
 				020C721928168FF500A0DE3A /* Info.plist */,
@@ -103,6 +105,7 @@
 				020C720228168FF500A0DE3A /* Sources */,
 				020C720328168FF500A0DE3A /* Frameworks */,
 				020C720428168FF500A0DE3A /* Resources */,
+				020C7223281691A200A0DE3A /* Sign Injection Bundle */,
 			);
 			buildRules = (
 			);
@@ -163,6 +166,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		020C7223281691A200A0DE3A /* Sign Injection Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Injection Bundle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE\\=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate\nINJECTION_APP_RESOURCES=/Applications/InjectionIII.app/Contents/Resources\n/usr/bin/codesign --force --sign $EXPANDED_CODE_SIGN_IDENTITY  $INJECTION_APP_RESOURCES/macOSInjection.bundle/Contents/MacOS/macOSInjection\n/usr/bin/codesign --force --sign $EXPANDED_CODE_SIGN_IDENTITY  $INJECTION_APP_RESOURCES/macOSSwiftUISupport.bundle/Contents/MacOS/macOSSwiftUISupport\n/usr/bin/codesign --force --sign $EXPANDED_CODE_SIGN_IDENTITY $INJECTION_APP_RESOURCES/macOSInjection.bundle/Contents/Frameworks/SwiftTrace.framework/SwiftTrace\ndefaults write com.johnholdsworth.InjectionIII \"$PROJECT_FILE_PATH\" $EXPANDED_CODE_SIGN_IDENTITY\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		020C720228168FF500A0DE3A /* Sources */ = {
@@ -303,10 +327,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HotReloadingExamples/HotReloadingExamples.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -323,6 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingExamples;
 				PRODUCT_NAME = HotReloadingExamples;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,10 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HotReloadingExamples/HotReloadingExamples.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -352,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingExamples;
 				PRODUCT_NAME = HotReloadingExamples;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
