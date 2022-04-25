@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Inject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -15,8 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else {
             fatalError("Expected scene of type UIWindowScene but got an unexpected type")
         }
+        let injectViewController = Inject.ViewControllerHost(MainViewController())
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window?.rootViewController = UINavigationController(rootViewController: injectViewController)
         window?.makeKeyAndVisible()
     }
 }

@@ -13,6 +13,7 @@
 		020C721328168FF500A0DE3A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C721228168FF500A0DE3A /* MainViewController.swift */; };
 		020C721528168FF500A0DE3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020C721428168FF500A0DE3A /* Assets.xcassets */; };
 		020C721828168FF500A0DE3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020C721628168FF500A0DE3A /* LaunchScreen.storyboard */; };
+		020C72212816905400A0DE3A /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 020C72202816905300A0DE3A /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020C72212816905400A0DE3A /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +109,9 @@
 			dependencies = (
 			);
 			name = HotReloadingExamples;
+			packageProductDependencies = (
+				020C72202816905300A0DE3A /* Inject */,
+			);
 			productName = HotReloadingExamples;
 			productReference = 020C720628168FF500A0DE3A /* HotReloadingExamples.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 020C71FD28168FF500A0DE3A;
+			packageReferences = (
+				020C721F2816905300A0DE3A /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			productRefGroup = 020C720728168FF500A0DE3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,12 +308,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingExamples;
 				PRODUCT_NAME = HotReloadingExamples;
 				SDKROOT = iphoneos;
@@ -323,12 +337,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingExamples;
 				PRODUCT_NAME = HotReloadingExamples;
 				SDKROOT = iphoneos;
@@ -360,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		020C721F2816905300A0DE3A /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		020C72202816905300A0DE3A /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 020C721F2816905300A0DE3A /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 020C71FE28168FF500A0DE3A /* Project object */;
 }
