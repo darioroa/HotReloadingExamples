@@ -14,7 +14,24 @@
 		020C721528168FF500A0DE3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020C721428168FF500A0DE3A /* Assets.xcassets */; };
 		020C721828168FF500A0DE3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020C721628168FF500A0DE3A /* LaunchScreen.storyboard */; };
 		020C72212816905400A0DE3A /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 020C72202816905300A0DE3A /* Inject */; };
+		020C722B2816929900A0DE3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C722A2816929900A0DE3A /* AppDelegate.swift */; };
+		020C722D2816929900A0DE3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C722C2816929900A0DE3A /* ViewController.swift */; };
+		020C722F2816929900A0DE3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020C722E2816929900A0DE3A /* Assets.xcassets */; };
+		020C72322816929900A0DE3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020C72302816929900A0DE3A /* Main.storyboard */; };
+		020C72382816930800A0DE3A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C72372816930800A0DE3A /* main.swift */; };
+		020C723B2816935100A0DE3A /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 020C723A2816935100A0DE3A /* Inject */; };
+		020C723C2816935100A0DE3A /* HotReloadingExamples.app in Resources */ = {isa = PBXBuildFile; fileRef = 020C720628168FF500A0DE3A /* HotReloadingExamples.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		020C723D2816935100A0DE3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 020C71FE28168FF500A0DE3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 020C720528168FF500A0DE3A;
+			remoteInfo = HotReloadingExamples;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		020C720628168FF500A0DE3A /* HotReloadingExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotReloadingExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +43,13 @@
 		020C721728168FF500A0DE3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020C721928168FF500A0DE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020C7222281690CB00A0DE3A /* HotReloadingExamples.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotReloadingExamples.entitlements; sourceTree = "<group>"; };
+		020C72282816929900A0DE3A /* HotReloadingAppKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotReloadingAppKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		020C722A2816929900A0DE3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		020C722C2816929900A0DE3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		020C722E2816929900A0DE3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		020C72312816929900A0DE3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		020C72332816929900A0DE3A /* HotReloadingAppKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HotReloadingAppKitExample.entitlements; sourceTree = "<group>"; };
+		020C72372816930800A0DE3A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +61,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		020C72252816929900A0DE3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020C723B2816935100A0DE3A /* Inject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				020C720828168FF500A0DE3A /* HotReloadingExamples */,
+				020C72292816929900A0DE3A /* HotReloadingAppKitExample */,
 				020C720728168FF500A0DE3A /* Products */,
+				020C72392816935100A0DE3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				020C720628168FF500A0DE3A /* HotReloadingExamples.app */,
+				020C72282816929900A0DE3A /* HotReloadingAppKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +130,26 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		020C72292816929900A0DE3A /* HotReloadingAppKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				020C72372816930800A0DE3A /* main.swift */,
+				020C722A2816929900A0DE3A /* AppDelegate.swift */,
+				020C722C2816929900A0DE3A /* ViewController.swift */,
+				020C722E2816929900A0DE3A /* Assets.xcassets */,
+				020C72302816929900A0DE3A /* Main.storyboard */,
+				020C72332816929900A0DE3A /* HotReloadingAppKitExample.entitlements */,
+			);
+			path = HotReloadingAppKitExample;
+			sourceTree = "<group>";
+		};
+		020C72392816935100A0DE3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +174,27 @@
 			productReference = 020C720628168FF500A0DE3A /* HotReloadingExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
+		020C72272816929900A0DE3A /* HotReloadingAppKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 020C72342816929900A0DE3A /* Build configuration list for PBXNativeTarget "HotReloadingAppKitExample" */;
+			buildPhases = (
+				020C72242816929900A0DE3A /* Sources */,
+				020C72252816929900A0DE3A /* Frameworks */,
+				020C72262816929900A0DE3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				020C723E2816935100A0DE3A /* PBXTargetDependency */,
+			);
+			name = HotReloadingAppKitExample;
+			packageProductDependencies = (
+				020C723A2816935100A0DE3A /* Inject */,
+			);
+			productName = HotReloadingAppKitExample;
+			productReference = 020C72282816929900A0DE3A /* HotReloadingAppKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,6 +206,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					020C720528168FF500A0DE3A = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					020C72272816929900A0DE3A = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
@@ -151,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				020C720528168FF500A0DE3A /* HotReloadingExamples */,
+				020C72272816929900A0DE3A /* HotReloadingAppKitExample */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +242,16 @@
 			files = (
 				020C721528168FF500A0DE3A /* Assets.xcassets in Resources */,
 				020C721828168FF500A0DE3A /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		020C72262816929900A0DE3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020C722F2816929900A0DE3A /* Assets.xcassets in Resources */,
+				020C72322816929900A0DE3A /* Main.storyboard in Resources */,
+				020C723C2816935100A0DE3A /* HotReloadingExamples.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +290,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		020C72242816929900A0DE3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020C722D2816929900A0DE3A /* ViewController.swift in Sources */,
+				020C722B2816929900A0DE3A /* AppDelegate.swift in Sources */,
+				020C72382816930800A0DE3A /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		020C723E2816935100A0DE3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 020C720528168FF500A0DE3A /* HotReloadingExamples */;
+			targetProxy = 020C723D2816935100A0DE3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		020C721628168FF500A0DE3A /* LaunchScreen.storyboard */ = {
@@ -209,6 +317,14 @@
 				020C721728168FF500A0DE3A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		020C72302816929900A0DE3A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				020C72312816929900A0DE3A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -332,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
+				ENABLE_BITCODE = NO;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
@@ -364,6 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PVGYED8SW9;
+				ENABLE_BITCODE = NO;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotReloadingExamples/Info.plist;
@@ -388,6 +506,74 @@
 			};
 			name = Release;
 		};
+		020C72352816929900A0DE3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HotReloadingAppKitExample/HotReloadingAppKitExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PVGYED8SW9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingAppKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		020C72362816929900A0DE3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HotReloadingAppKitExample/HotReloadingAppKitExample.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PVGYED8SW9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.roadesign.HotReloadingAppKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +595,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		020C72342816929900A0DE3A /* Build configuration list for PBXNativeTarget "HotReloadingAppKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				020C72352816929900A0DE3A /* Debug */,
+				020C72362816929900A0DE3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -424,6 +619,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		020C72202816905300A0DE3A /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 020C721F2816905300A0DE3A /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+		020C723A2816935100A0DE3A /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 020C721F2816905300A0DE3A /* XCRemoteSwiftPackageReference "Inject" */;
 			productName = Inject;
